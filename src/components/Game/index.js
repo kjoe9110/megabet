@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Collapse } from "react-collapse";
 import styles from "./styles.module.scss";
 
-export default function Game({ data }) {
+export default function Game({ game, data }) {
   const [collapsed, setCollapsed] = useState();
   const [betTo, setBetTo] = useState();
   const [betAmount, setBetAmount] = useState();
@@ -13,7 +13,7 @@ export default function Game({ data }) {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} style={{ background: game.background }}>
       <div
         className={styles.gameHeader}
         onClick={() => setCollapsed(!collapsed)}

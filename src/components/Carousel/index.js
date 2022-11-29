@@ -1,18 +1,19 @@
 import classnames from "classnames";
 import styles from "./styles.module.scss";
 
-export default function Carousel({ activeGame, games, onChange }) {
+export default function Carousel({ activeIndex, games, onChange }) {
   return (
     <section
-      className={classnames(styles.container, styles[`active${activeGame}`])}
+      className={classnames(styles.container, styles[`active${activeIndex}`])}
     >
-      {games.map((game, index) => (
+      {games.map(({ name, background }, index) => (
         <div
           key={index}
           className={styles.item}
-          onClick={() => onChange(index + 1)}
+          style={{ background }}
+          onClick={() => onChange(index)}
         >
-          {game}
+          {name}
         </div>
       ))}
     </section>
