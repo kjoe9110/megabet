@@ -5,8 +5,8 @@ import styles from "./styles.module.scss";
 
 export default function Root() {
   const handleMetamask = () => {
-    console.log("Metamask button clicked!")
-  }
+    console.log("Metamask button clicked!");
+  };
   return (
     <BrowserRouter>
       <header className={styles.header}>

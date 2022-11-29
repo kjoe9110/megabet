@@ -1,5 +1,4 @@
 import classnames from "classnames";
-import { useState } from "react";
 import styles from "./styles.module.scss";
 
 export default function Carousel({ activeGame, games, onChange }) {
