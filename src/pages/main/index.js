@@ -11,7 +11,7 @@ export default function MainPage() {
 
   const fetchGameData = async () => {
     const res = await fetch(
-      "http://www.randomnumberapi.com/api/v1.0/random?min=100&max=1000&count=5"
+      "https://cors-proxy-wild.herokuapp.com/http://www.randomnumberapi.com/api/v1.0/random?min=100&max=1000&count=5"
     );
     const data = await res.json();
     setGameData(data);
