@@ -28,7 +28,7 @@ const GAMES = [
 
 export default function MainPage() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [gameData, setGameData] = useState([]);
+  const [gameData, setGameData] = useState([0, 0, 0, 0, 0]);
 
   const fetchGameData = async () => {
     const res = await fetch(

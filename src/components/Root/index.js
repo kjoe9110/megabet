@@ -10,9 +10,6 @@ export default function Root() {
   return (
     <BrowserRouter>
       <header className={styles.header}>
-        <a className={styles.logo} href="/">
-          <img src="./logo192.png" alt="logo" />
-        </a>
         <nav className={styles.nav}>
           <a className={styles.link} href="/">
             MAIN
