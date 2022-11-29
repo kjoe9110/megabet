@@ -6,13 +6,13 @@ export default function Carousel({ activeGame, games, onChange }) {
     <section
       className={classnames(styles.container, styles[`active${activeGame}`])}
     >
-      {games.map(({ name }, index) => (
+      {games.map((game, index) => (
         <div
           key={index}
           className={styles.item}
           onClick={() => onChange(index + 1)}
         >
-          {name}
+          {game}
         </div>
       ))}
     </section>

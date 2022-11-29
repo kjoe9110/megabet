@@ -16,6 +16,12 @@ export default function MainPage() {
     const data = await res.json();
     setGameData(data);
   };
+
+  useEffect(() => {
+    const id = setInterval(() => fetchGameData(activeGame), 1000 * 60)
+    return () => clearInterval(id)
+  }, [])
+
   useEffect(() => {
     fetchGameData(activeGame);
   }, [activeGame]);
