@@ -1,0 +1,12 @@
+.container {
+  text-align: center;
+  
+  .gameList {
+    width: 40%;
+    margin: 64px auto 0;
+
+    @media (max-width: 768px) {
+      width: 80%;
+    }
+  }
+}
