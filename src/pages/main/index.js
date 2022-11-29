@@ -59,6 +59,7 @@ export default function MainPage() {
         {gameData.map((data, index) => (
           <Game
             key={`${activeIndex}-${index}`}
+            defaultCollapsed={!index}
             game={GAMES[activeIndex]}
             data={data}
           />

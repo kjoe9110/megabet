@@ -3,8 +3,8 @@ import { useState } from "react";
 import { Collapse } from "react-collapse";
 import styles from "./styles.module.scss";
 
-export default function Game({ game, data }) {
-  const [collapsed, setCollapsed] = useState();
+export default function Game({ defaultCollapsed, game, data }) {
+  const [collapsed, setCollapsed] = useState(defaultCollapsed);
   const [betTo, setBetTo] = useState();
   const [betAmount, setBetAmount] = useState();
 
